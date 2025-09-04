@@ -9,7 +9,7 @@ The scripts provided for the Network Refresh Project automates various network o
 ## Files in this Repository
 
 ### Core Scripts
-- **`Network Refresh - CIS Device Staging.py`** - Handles the staging and initial configuration of CIS network devices
+- **`Network Refresh - CSR Device Staging.py`** - Handles the staging and initial configuration of CSR network devices
 - **`Network Refresh - MOVE Network to Template.py`** - Automates the migration of network configurations to standardized templates
 - **`Network Refresh - Device Management.py`** - Manages existing network devices and their configurations  
 
@@ -31,8 +31,8 @@ The scripts provided for the Network Refresh Project automates various network o
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/JeremyElliott84/CIS.git
-   cd CIS
+   git clone https://github.com/JeremyElliott84/CSR.git
+   cd CSR
    ```
 
 2. **Install dependencies:**
@@ -52,21 +52,22 @@ The scripts provided for the Network Refresh Project automates various network o
 
 ### Device Staging
 ```bash
-python "Network Refresh - CIS Device Staging.py"
+python "Network Refresh - CSR Device Staging.py"
 ```
-Use this script to stage new CIS network devices with initial configurations.
-
-### Device Management  
-```bash
-python "Network Refresh - Device Management.py"
-```
-Manage existing network devices, update configurations, and perform maintenance tasks.
+Use this script to stage new Carters MX67 routers with initial configurations.
 
 ### Network Template Migration
 ```bash
 python "Network Refresh - MOVE Network to Template.py"
 ```
-Migrate existing network configurations to standardized templates.
+Migrate existing network to the new template.
+
+### Device Management  
+```bash
+python "Network Refresh - Device Management.py"
+```
+Removes old network devices, Adds new network devices, removes old DHCP reservations, creates new DHCP reservations, renames devices
+
 
 ## Important Notes
 
@@ -80,23 +81,12 @@ Migrate existing network configurations to standardized templates.
 - Always backup current configurations before making changes
 - Verify network connectivity and permissions before execution
 
-## Troubleshooting
-
-### Common Issues
-- **Connection timeouts**: Check network connectivity and firewall rules
-- **Authentication errors**: Verify credentials in `.env` file
-- **Permission denied**: Ensure account has appropriate network administration privileges
-
-### Logs
-Check script output and logs for detailed error information. Most scripts will provide verbose output during execution.
 
 ## Support
 For questions or issues related to this project please contact Jeremy Elliott @ Carters OshKosh Inc.
 jeremy.elliot@carters.com
 762.232.1100 Office
 
-## Project Status
-This project is actively maintained as part of the ongoing network refresh initiative.
 
 ---
 *Last updated: September 2025*
